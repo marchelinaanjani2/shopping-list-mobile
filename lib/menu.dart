@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_list/widgets/left_drawer.dart';
+import 'package:shopping_list/shop_form_page.dart'; // Import ShopFormPage
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
@@ -16,7 +18,11 @@ class MyHomePage extends StatelessWidget {
         title: const Text(
           'Shopping List',
         ),
+        backgroundColor: Colors.indigo,
+        foregroundColor: Colors.white,
       ),
+      // Masukkan drawer sebagai parameter nilai drawer dari widget Scaffold
+      drawer: const LeftDrawer(),
       body: SingleChildScrollView(
         // Widget wrapper yang dapat discroll
         child: Padding(
@@ -68,7 +74,7 @@ class ShopItem {
 class ShopCard extends StatelessWidget {
   final ShopItem item;
 
-  const ShopCard(this.item, {super.key}); // Constructor
+  const ShopCard(this.item, {Key? key}) : super(key: key); // Constructor
 
   @override
   Widget build(BuildContext context) {
