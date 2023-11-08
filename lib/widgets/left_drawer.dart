@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_list/menu.dart';
-import 'package:shopping_list/shop_form_page.dart'; // Assuming shop_form_page.dart exists with the ShopFormPage implementation
+import 'package:shopping_list/screens/menu.dart';
+import 'package:shopping_list/screens/shoplist_form.dart'; // Assuming shop_form_page.dart exists with the ShopFormPage implementation
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({Key? key});
